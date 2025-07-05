@@ -1,34 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meu Texto e Vídeo</title>
+  <meta charset="UTF-8" /> <!-- Codificação UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsividade -->
+  <title>CAMPUSCONNECT</title> <!-- Título da aba -->
+
+  <!-- Bootstrap CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS customizado -->
   <link rel="stylesheet" href="style.css" />
+  
+  <!-- jQuery via CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 
-  <header>
-    <img src="imagem/logo.png" alt="Logo do site">
+  <!-- Header separado fixo no topo, acima da navbar -->
+  <header class="header-fixed">
+    <div class="stars-background"></div> <!-- Estrelas animadas no header -->
+    <h1 class="header-title">Campus Connect</h1> <!-- Título -->
+    <!-- Se quiser o ponto oval animado, pode adicionar aqui -->
+    <!-- <div class="nave-espacial"></div> -->
   </header>
 
-  <div class="container">
-    <h1>Bem-vindo!</h1>
-    
-    <p>Descrição</p>
-    <p></p>
+  <!-- Navbar fixa abaixo do header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-custom">
+    <div class="container-fluid">
+      <!-- Marca / logo -->
+      <a class="navbar-brand" href="#">Campus Connect</a>
+      <!-- Botão para colapsar menu em telas pequenas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Itens do menu -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#resumo">Resumo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#telas">Telas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#video">Vídeo</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <p><a href="https://exemplo.com" target="_blank">Minha URL Externa</a></p>
-    <p><a href="https://exemplo.com" target="_blank">Minha URL Externa</a></p>
-    <p><a href="https://exemplo.com" target="_blank">Minha URL Externa</a></p>
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <!-- Seção Resumo -->
+    <section id="resumo" class="text-content">
+      <p>
+         Este trabalho apresenta o desenvolvimento de um aplicativo móvel, realizado no âmbito da disciplina de Desenvolvimento Mobile. O principal objetivo do aplicativo é fortalecer o elo entre a instituição e toda a comunidade direta ou indiretamente ligada ao campus, incluindo alunos, familiares, professores e servidores, promovendo maior integração e colaboração. A criação do aplicativo foi motivada pela necessidade de melhorar a comunicação entre os diferentes turnos e cursos, fortalecer o senso de pertencimento e possibilitar que a comunidade conte com uma rede de apoio, além de facilitar a divulgação de atividades acadêmicas, eventos, cursos, projetos de extensão, vagas de estágio e emprego, bem como iniciativas de empreendedorismo, tornando essas informações mais acessíveis a todos. O aplicativo conta com telas essenciais, como inicial, login, cadastro, perfil do usuário, feed de notícias e feed de anúncios. O feed de notícias é destinado à divulgação de eventos e atividades que promovem o desenvolvimento acadêmico, enquanto o feed de anúncios visa fomentar o apoio às iniciativas empreendedoras da comunidade. A metodologia adotada envolveu levantamento de requisitos, prototipagem utilizando o Figma, modelagem das telas e funcionalidades, implementação em React Native com suporte da Expo para desenvolvimento multiplataforma, e integração com Firebase para autenticação, banco de dados em tempo real e armazenamento, garantindo segurança e escalabilidade. Espera-se que o aplicativo contribua significativamente para o fortalecimento da rede colaborativa da comunidade acadêmica, facilitando o acesso à informação, promovendo o engajamento em atividades acadêmicas e impulsionando o empreendedorismo local, resultando em maior integração, suporte mútuo e crescimento conjunto entre todos os envolvidos no ambiente educacional.
+      </p>
 
-    <div class="video-wrapper">
+      <p><a href="https://exemplo.com" target="_blank">CÓDIGOS DO APP</a></p>
+      <p><a href="https://exemplo.com" target="_blank">APK</a></p>
+    </section>
+
+    <!-- Seção Telas com carrossel Bootstrap -->
+    <section id="telas" class="my-5 d-flex justify-content-center">
+      <div id="carouselTelas" class="carousel slide w-75" data-bs-ride="carousel" style="max-width:600px;">
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <img src="tela1.jpg" class="d-block w-100" alt="Tela 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="tela2.jpg" class="d-block w-100" alt="Tela 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="tela3.jpg" class="d-block w-100" alt="Tela 3" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTelas" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTelas" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Seção Vídeo -->
+    <section id="video" class="video-wrapper">
       <video controls>
         <source src="meuvideo.mp4" type="video/mp4" />
         Seu navegador não suporta o vídeo.
       </video>
-    </div>
-  </div>
-  
+    </section>
+  </main>
+
+  <!-- Footer fixo com estrelas e texto -->
+  <footer>
+    <div class="stars-footer"></div>
+    <p>© Todos os direitos reservados 2025</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script customizado -->
+  <script src="script.js"></script>
+
+  <!-- Scroll suave para links da navbar -->
+  <script>
+    $(function() {
+      $('a.nav-link').on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top - 120 /* Ajuste para header + navbar fixos */
+          }, 600);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
