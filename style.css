@@ -63,22 +63,22 @@
                                                                               width: 100vw;
                                                                                 z-index: 1060; /* ACIMA das estrelas e do header */
                                                                                 }
-
-                                                                                /* Container principal com fundo cinza claro e bordas duplas grossas azul marinho */
-                                                                                main.container {
-                                                                                  margin-top: 140px; /* Espaço para header + navbar fixos */
-                                                                                    max-width: 900px;
-                                                                                      margin-left: auto;
-                                                                                        margin-right: auto;
-                                                                                          padding: 30px;
-                                                                                            border: 6px double #001f4d; /* Borda dupla azul marinho grossa */
-                                                                                              background-color: #d3d3d3; /* Cinza claro */
-                                                                                                border-radius: 12px;
-                                                                                                  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-                                                                                                    color: #000; /* Texto escuro */
-                                                                                                      position: relative;
-                                                                                                        z-index: 2;
-                                                                                                        }
+/* Container principal com fundo cinza claro e bordas duplas grossas azul marinho */
+.main-container {
+  margin-top: 140px; /* Espaço para header + navbar fixos */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  border: 6px double #001f4d; /* Borda dupla azul marinho grossa */
+  background-color: #d3d3d3; /* Cinza claro */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  color: #000; /* Texto escuro */
+  position: relative;
+  z-index: 2;
+/* Fim da regra main-container */
+}
 
                                                                                                         /* Texto dentro do container */
                                                                                                         .text-content {
@@ -225,4 +225,3 @@
                                                                                                                                                                                                                                                                                                                   max-width: 100%; /* Carrossel ocupa toda largura */
                                                                                                                                                                                                                                                                                                                     }
                                                                                                                                                                                                                                                                                                                     }
-                                                                                                                                                                                                                                                                                                                    
