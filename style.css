@@ -21,7 +21,7 @@ body {
   top: 0; /* Topo da página */
   left: 0;
   width: 100vw; /* Largura total */
-  height: 80px; /* Altura da header */
+  height: 120px; /* Altura da header aumentada */
   background-color: #001f4d; /* Azul marinho */
   color: #fff; /* Texto branco */
   display: flex; /* Flexbox para alinhamento */
@@ -40,7 +40,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 40px; /* Altura para estrelas */
+  height: 100%; /* Estrelas ocupam toda a altura do header */
   pointer-events: none; /* Não interfere em cliques */
   z-index: 0; /* Sempre atrás de tudo no header */
   background: transparent;
